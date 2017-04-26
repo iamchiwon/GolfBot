@@ -46,7 +46,7 @@ def findPort():
 		comPortsList = list(comports())
 		EBBport = None
 		for port in comPortsList:
-			if port[1].startswith("Arduino"):
+			if port[1].startswith("Arduino") or port[1].startswith("USB-SERIAL") or port[1].startswith("USB Serial"):
 				EBBport = port[0] 	#Success; EBB found by name match.
 				break	#stop searching-- we are done.
 		if EBBport is None:
